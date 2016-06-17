@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a time value answer to a survey question.",
+
+    "type": "object",
+    "definitions": {
+        "answer": {
+            "$ref": "survey-answer-0.x.json"
+        },
+        "full_or_partial_date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?$"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/answer"
+        },
+        {
+            "properties": {
+                "value": {
+                    "$ref": "#/definitions/full_or_partial_date"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema models a test survey with questions that require date or time answers.",
+    "type": "object",
+
+    "references": [
+
+    ],
+
+    "definitions": {
+        "survey": {
+            "$ref": "survey-0.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-0.x.json"
+        },
+        "survey_time_answer": {
+            "$ref": "survey-time-answer-0.1.json"
+        },
+        "survey_date_answer": {
+            "$ref": "survey-date-answer-0.1.json"
+        },
+        "survey_time_answer_item": {
+            "description": "A survey item that has an answer made up of a time.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_time_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "survey_date_answer_item": {
+            "description": "A survey item that has an answer made up of a calendar date, complete or partial.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_date_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "minItems": 3,
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_time_answer_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "1",
+                                                    "text": "At what time do you usually go to bed?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_date_answer_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "2",
+                                                    "text": "Your Date of Birth"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_date_answer_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "3",
+                                                    "text": "When did you last smoked?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalItems": false
+                }
+            }
+        }
+    ]
+}

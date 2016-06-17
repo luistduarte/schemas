@@ -1,0 +1,37 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "1",
+                "text": "At what time do you usually go to bed?"
+            },
+            "answers": [
+                {
+                    "value": "23:30"
+                }
+            ]
+        },
+        {
+            "question": {
+                "label": "2",
+                "text": "Your Date of Birth"
+            },
+            "answers": [
+                {
+                    "value": "1967-12-09"
+                }
+            ]
+        },
+        {
+            "question": {
+                "label": "3",
+                "text": "Date (or month/year) you last smoked"
+            },
+            "answers": [
+                {
+                    "value": "1997-12"
+                }
+            ]
+        }
+    ]
+}
