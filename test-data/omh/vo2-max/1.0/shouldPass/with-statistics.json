@@ -1,0 +1,13 @@
+{
+    "vo2_max": {
+        "value": 29.5,
+        "unit": "ml/kg/min"
+    },
+    "effective_time_frame": {
+        "time_interval": {
+            "start_date_time": "2013-02-05T09:25:00Z",
+            "end_date_time": "2016-02-05T10:25:00Z"
+        }
+    },
+    "descriptive_statistic": "maximum"
+}
