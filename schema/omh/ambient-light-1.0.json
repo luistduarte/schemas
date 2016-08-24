@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents measurement of ambient light.",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents  Light, electromagnetic radiation (physical force)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/56242006"
+        }
+    ],
+
+    "definitions": {
+        "illuminance_unit_value": {
+            "$ref": "illuminance-unit-value-1.x.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        }
+    },
+
+    "properties": {
+        "ambient_light": {
+            "$ref": "#/definitions/illuminance_unit_value"
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        }
+    },
+
+    "required": [
+        "ambient_light",
+        "effective_time_frame"
+    ]
+}
