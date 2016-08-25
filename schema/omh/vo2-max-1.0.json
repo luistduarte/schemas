@@ -19,9 +19,6 @@
         },
         "descriptive_statistic": {
             "$ref": "descriptive-statistic-1.x.json"
-        },
-        "temporal_relationship_to_physical_activity": {
-            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
         }
     },
 
