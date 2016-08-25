@@ -1,7 +1,7 @@
 {
     "vo2_max": {
         "value": 29.5,
-        "unit": "ml/kg/min"
+        "unit": "mL/kg/min"
     },
     "effective_time_frame": {
         "time_interval": {

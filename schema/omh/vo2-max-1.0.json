@@ -35,7 +35,7 @@
                     "properties": {
                         "unit": {
                             "enum": [
-                                "ml/kg/min"
+                                "mL/kg/min"
                             ]
                         }
                     }
@@ -47,9 +47,6 @@
         },
         "descriptive_statistic": {
             "$ref": "#/definitions/descriptive_statistic"
-        },
-        "temporal_relationship_to_physical_activity": {
-            "$ref": "#/definitions/temporal_relationship_to_physical_activity"
         }
     },
     "required": [
