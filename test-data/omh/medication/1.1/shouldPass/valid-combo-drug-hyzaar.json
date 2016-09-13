@@ -1,0 +1,16 @@
+{
+    "trade_name": "Hyzaar 50/12.5",
+    "strength": [
+        {
+            "ingredient_name": "hydrochlorthiazide",
+            "value": 12.5,
+            "unit": "mg"
+        },
+        {
+            "ingredient_name": "losartan potassium",
+            "value": 50,
+            "unit": "mg"
+        }
+    ],
+    "rxnorm_code": 979470
+}
