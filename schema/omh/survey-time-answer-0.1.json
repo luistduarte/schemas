@@ -6,10 +6,6 @@
     "definitions": {
         "answer": {
             "$ref": "survey-answer-0.x.json"
-        },
-        "time_of_day": {
-            "type": "string",
-            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d?$"
         }
     },
     "allOf": [
@@ -19,8 +15,8 @@
         {
             "properties": {
                 "value": {
-                    "$ref": "#/definitions/time_of_day",
-                    "description": "A time of day value (hours and minutes)."
+                    "description": "A time of day value (hours and minutes).",
+                    "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
                 }
             }
         }
