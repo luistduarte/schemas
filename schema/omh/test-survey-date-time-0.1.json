@@ -60,6 +60,31 @@
                     }
                 }
             ]
+        },
+        "survey_date_time_answer_item": {
+            "description": "A survey item that has an answer made up of a calendar date, complete or partial and an optional 24-hr time.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/survey_date_answer"
+                                },
+                                {
+                                    "$ref": "#/definitions/survey_time_answer"
+                                }
+                            ],
+                            "maxItems": 2
+                        }
+                    }
+                }
+            ]
         }
     },
     "allOf": [
@@ -113,7 +138,7 @@
                         {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/survey_date_answer_item"
+                                    "$ref": "#/definitions/survey_date_time_answer_item"
                                 },
                                 {
                                     "properties": {
