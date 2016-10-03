@@ -19,7 +19,7 @@
             "$ref": "duration-unit-value-1.x.json"
         },
         "date": {
-            "$ref": "date-1.0.json"
+            "$ref": "date-1.x.json"
         },
         "part_of_day": {
             "$ref": "part-of-day-1.x.json"
